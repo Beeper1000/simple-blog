@@ -9,27 +9,30 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <body style="font-family: Open Sans, sans-serif">
+    <section class="px-6 py-8">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <header class="max-w-xl mx-auto mt-20 text-center">
+                  
                         {{ $header }}
-                    </div>
+                    
                 </header>
             @endif
 
             <!-- Page Content -->
-            <main>
+            <main class="max-w-6xl mx-auto mt-6 lg:mt-20 space-y-6">
                 {{ $slot }}
             </main>
-        </div>
+
+            @include('layouts.footer')
+</section>
     </body>
 </html>
