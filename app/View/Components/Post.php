@@ -9,15 +9,18 @@ class Post extends Component
 
     public $post;
 
+    public $leading;
+
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($post)
+    public function __construct($leading,$post)
     {
         $this -> post = $post;
+        $this -> leading = $leading;
     }
 
     /**
