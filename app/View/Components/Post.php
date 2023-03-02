@@ -8,7 +8,6 @@ class Post extends Component
 {
 
     public $post;
-
     public $leading;
 
 
@@ -17,10 +16,10 @@ class Post extends Component
      *
      * @return void
      */
-    public function __construct($leading,$post)
+    public function __construct($leading, $post)
     {
-        $this -> post = $post;
-        $this -> leading = $leading;
+        $this->post = $post;
+        $this->leading = $leading;
     }
 
     /**
