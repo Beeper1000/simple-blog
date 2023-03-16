@@ -10,7 +10,7 @@
                 <div class="space-x-2">
                  @foreach($post->tags as $tag)  
                 <a href="#"
-                        class="px-3 py-1 border border-{{ $tag->color }}-500 rounded-full text-{{ $tag->color }}-500 text-xs uppercase font-semibold"
+                        class="px-3 py-1 border border-{{ $tag->color }}-300 rounded-full text-{{ $tag->color }}-300 text-xs uppercase font-semibold"
                         style="font-size: 10px">{{ $tag->name }}</a>
                     @endforeach
                 </div>
