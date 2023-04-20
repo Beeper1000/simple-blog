@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Post;
+use App\Http\Controllers\PostController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,11 +31,11 @@ Route::get('/post/{id}', function ($id) {
 
     return view('post', ['post' => $post]);
 });
-/*
-            Route::get('/home', function () {
-                return view('home');
-            });
 
+            Route::get('admin/posts/create', [PostController::class, 'create'] ); 
+                
+            
+/*
             Route::get('/post', function () {
                 return view('post');
             });
